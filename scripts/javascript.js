@@ -1,1 +1,3 @@
-
+function sayHi() {
+  alert("Hi");
+}
