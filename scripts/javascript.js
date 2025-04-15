@@ -1,152 +1,122 @@
-// Three.js animation for mission section
-const canvas = document.getElementById('mission-canvas');
+// === Hamburger Menu Toggle ===
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-if (canvas) {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    canvas.appendChild(renderer.domElement);
-
-    const geometry = new THREE.TorusGeometry(1, 0.4, 64, 64);
-    const material = new THREE.MeshPhongMaterial({
-        color: 0x06b6d4,
-        wireframe: true
-    });
-
-    const torus = new THREE.Mesh(geometry, material);
-    scene.add(torus);
-
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
-
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(2, 2, 5);
-    scene.add(directionalLight);
-
-    camera.position.z = 3;
-
-    function animate() {
-        requestAnimationFrame(animate);
-        torus.rotation.x += 0.01;
-        torus.rotation.y += 0.01;
-        renderer.render(scene, camera);
-    }
-
-    animate();
-
-    window.addEventListener('resize', () => {
-        const width = canvas.clientWidth;
-        const height = canvas.clientHeight;
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(width, height);
-    });
-}
-
-
-// Mobile menu functionality
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-// Toggle mobile menu
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
 });
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('nav')) {
-        navLinks.classList.remove('active');
-    }
-});
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    // Close menu when a link is clicked (optional, good for single-page apps or smooth scrolling)
+    // hamburger.classList.remove("active");
+    // navMenu.classList.remove("active");
+}));
 
-// Add active class to current page link
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const navLinksElements = document.querySelectorAll('.nav-links a');
+// === Basic tsParticles Configuration (Example) ===
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Check if tsparticles is loaded
+    if (typeof tsParticles !== 'undefined') {
+        // Add a div with id="tsparticles" in your HTML body where you want the particles
+        const particlesContainer = document.createElement('div');
+        particlesContainer.id = 'tsparticles';
+        document.body.prepend(particlesContainer); // Add it at the beginning of body
 
-navLinksElements.forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-    }
-});
-
-// Three.js animation for hero section
-const canvas = document.getElementById('hero-canvas');
-
-if (canvas) {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-
-    // Setup renderer
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    canvas.appendChild(renderer.domElement);
-
-    // Create sphere geometry
-    const geometry = new THREE.SphereGeometry(1, 64, 64);
-    const material = new THREE.MeshPhongMaterial({
-        color: 0x4c1d95,
-        wireframe: true,
-        shininess: 100
-    });
-
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
-
-    // Add lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
-
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(2, 2, 5);
-    scene.add(directionalLight);
-
-    // Position camera
-    camera.position.z = 3;
-
-    // Animation variables
-    let time = 0;
-    const distortionSpeed = 0.002;
-    const rotationSpeed = 0.001;
-
-    // Handle window resize
-    window.addEventListener('resize', () => {
-        const width = canvas.clientWidth;
-        const height = canvas.clientHeight;
-
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize(width, height);
-    });
-
-    // Animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-
-        time += distortionSpeed;
-
-        // Apply distortion effect
-        geometry.vertices?.forEach(vertex => {
-            const originalPosition = vertex.clone();
-            const distortion = Math.sin(time + originalPosition.x * 2) * 0.1;
-            vertex.add(originalPosition.normalize().multiplyScalar(distortion));
+        tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "grab", // Can be "grab", "bubble", "repulse"
+                    },
+                    onClick: {
+                        enable: true,
+                        mode: "push", // Can be "push", "remove", "bubble"
+                    },
+                    resize: true,
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 1,
+                        },
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3,
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4,
+                    },
+                    push: {
+                        particles_nb: 4,
+                    },
+                    remove: {
+                        particles_nb: 2,
+                    },
+                },
+            },
+            particles: {
+                color: {
+                    value: "#9f8fff", // Particle color
+                },
+                links: {
+                    color: "#ffffff", // Link color
+                    distance: 150,
+                    enable: true,
+                    opacity: 0.2, // Make links subtle
+                    width: 1,
+                },
+                collisions: {
+                    enable: false, // Avoid particles bouncing off each other
+                },
+                move: {
+                    direction: "none",
+                    enable: true,
+                    outMode: "out", // Particles disappear when they go out
+                    random: true,
+                    speed: 1, // Slower speed for a calmer effect
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                        value_area: 800, // Adjust density
+                    },
+                    value: 50, // Number of particles
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                },
+                shape: {
+                    type: "circle", // Can be "circle", "edge", "triangle", "polygon", "star"
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                },
+            },
+            detectRetina: true,
+            background: { // Ensure background is transparent so CSS background shows
+                color: 'transparent',
+            }
         });
-
-        if (geometry.vertices) {
-            geometry.verticesNeedUpdate = true;
-        }
-
-        // Rotate sphere
-        sphere.rotation.x += rotationSpeed;
-        sphere.rotation.y += rotationSpeed;
-
-        renderer.render(scene, camera);
+    } else {
+        console.log("tsParticles library not loaded.");
     }
 
-    animate();
-}
+    // === Placeholder for other animations (e.g., using GSAP or ScrollReveal) ===
+    // console.log("Website loaded. Initialize animations here.");
+    // Example: Animate hero text on load
+    // if (typeof gsap !== 'undefined') {
+    //     gsap.from("#hero h1", { duration: 1, y: 50, opacity: 0, delay: 0.5 });
+    //     gsap.from("#hero p", { duration: 1, y: 50, opacity: 0, delay: 0.8 });
+    // }
+}); 
