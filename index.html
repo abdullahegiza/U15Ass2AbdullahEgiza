@@ -3,110 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Slovenské Vzdelávacie Centrum</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/about.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Slovenské Vzdelávacie Centrum - About</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Slovenské Vzdelávacie Centrum</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 12h18M3 6h18M3 18h18"/>
-                </svg>
-            </button>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="events.html">Events</a>
-                <a href="donate.html">Donate</a>
-                <a href="games.html">Educational Games</a>
-                <a href="membership.html">Membership</a>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">Slovenské Vzdelávacie Centrum</a>
             </div>
-        </div>
-    </nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Educational Games</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-    <main>
-        <section class="mission-section">
-            <div class="mission-content">
-                <div class="mission-text">
-                    <h1 class="hero-heading">Our Mission & Vision</h1>
-                    <p>At Slovenské Vzdelávacie Centrum, we believe in the transformative power of education. Our mission is to provide innovative learning opportunities and support to communities across Slovakia and beyond.</p>
-                </div>
-                <div id="mission-canvas"></div>
-            </div>
+    <main class="page-content">
+        <h1>About Us</h1>
+        <section>
+            <h2>Our Mission</h2>
+            <p>Placeholder text about the charity's mission. We aim to provide educational resources and support to the Slovak community, fostering growth and connection through innovative programs and events.</p>
         </section>
-
-        <section class="values-section">
-            <div class="container">
-                <h2 class="section-heading text-center">Our Core Values</h2>
-                <div class="values-grid">
-                    <div class="feature-card">
-                        <div class="icon purple">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                        </div>
-                        <h3>Innovation</h3>
-                        <p>Embracing new technologies and methods to enhance learning experiences.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon cyan">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                            </svg>
-                        </div>
-                        <h3>Inclusivity</h3>
-                        <p>Creating opportunities for learning that are accessible to everyone.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon purple">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                            </svg>
-                        </div>
-                        <h3>Excellence</h3>
-                        <p>Striving for the highest standards in educational content and delivery.</p>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <h2>Our Vision</h2>
+            <p>Placeholder text about the charity's vision. We envision a future where every member of the community has access to quality education and opportunities for personal and professional development.</p>
         </section>
-
-        <section class="team-section">
-            <div class="container">
-                <h2 class="section-heading text-center">Our Leadership Team</h2>
-                <p class="text-center" style="color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 1rem auto 3rem;">Meet the dedicated individuals who drive our mission forward and work tirelessly to create positive change through education.</p>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <div class="member-avatar-inner"></div>
-                        </div>
-                        <h3>Dr. Jana Kováčová</h3>
-                        <p>Executive Director</p>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <div class="member-avatar-inner"></div>
-                        </div>
-                        <h3>Ing. Martin Novák</h3>
-                        <p>Head of Education</p>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-avatar">
-                            <div class="member-avatar-inner"></div>
-                        </div>
-                        <h3>Mgr. Eva Svobodová</h3>
-                        <p>Community Outreach</p>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <h2>Our Team</h2>
+            <p>Placeholder text about the team. Introduce key members or the organizational structure.</p>
+            <!-- Potentially add team member profiles -->
         </section>
     </main>
 
-    <script src="js/main.js"></script>
-    <script src="js/about-animation.js"></script>
+    <footer>
+        <p>&copy; 2024 Slovenské Vzdelávacie Centrum. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
-</html>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovenské Vzdelávacie Centrum - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Consider adding futuristic fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">Slovenské Vzdelávacie Centrum</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Educational Games</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to Slovenské Vzdelávacie Centrum</h1>
+            <p>Empowering through education and community.</p>
+            <!-- Placeholder for futuristic visuals/animations -->
+            <div id="animation-placeholder"></div>
+        </section>
+
+        <section id="intro">
+            <h2>About Us Briefly</h2>
+            <p>Learn more about our mission and vision on the <a href="about.html">About page</a>.</p>
+            <!-- Add more content or visuals here -->
+        </section>
+
+        <!-- Add more sections as needed -->
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Slovenské Vzdelávacie Centrum. All rights reserved.</p>
+        <!-- Add social media links, contact info etc. -->
+    </footer>
+
+    <!-- tsParticles library for background effects -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    <!-- Or GSAP for animations -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
+    <!-- Or Three.js for 3D -->
+    <!-- <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.150.1/build/three.module.js"
+            }
+        }
+    </script> -->
+    <script src="js/script.js"></script>
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovenské Vzdelávacie Centrum - Membership</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">Slovenské Vzdelávacie Centrum</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link">Educational Games</a></li>
+                <li class="nav-item"><a href="membership.html" class="nav-link active">Membership</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Become a Member</h1>
+        <section id="membership-benefits">
+            <h2>Why Join Us?</h2>
+            <p>Placeholder text outlining the benefits of becoming a member. This could include access to exclusive content, discounts on events, newsletters, voting rights, etc.</p>
+            <ul>
+                <li>Benefit 1: Exclusive workshops</li>
+                <li>Benefit 2: Community forum access</li>
+                <li>Benefit 3: Early event registration</li>
+                <li>Benefit 4: Support our mission directly</li>
+            </ul>
+        </section>
+        <section id="membership-form">
+            <h2>Sign Up</h2>
+            <p>Join our community today!</p>
+            <!-- Placeholder for membership signup form or link -->
+            <form action="#" method="post">
+                <!-- Basic form fields -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <button type="submit" class="cta-button">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Slovenské Vzdelávacie Centrum. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
