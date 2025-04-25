@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovenské Vzdelávacie Centrum - Membership</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Add specific styles for the form if needed */
+        .membership-form {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(25, 28, 40, 0.8); /* Slightly more opaque */
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(10, 10, 20, 0.7);
+            border: 1px solid var(--glass-border);
+            border-radius: 5px;
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px var(--glow-color);
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="glow-overlay"></div>
+    <div class="noise-overlay"></div>
 
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="index.html">Slovenské Vzdelávacie Centrum</a>
+            </div>
+            <ul class="navbar-nav">
+                 <li><a href="index.html" class="nav-link">Home</a></li>
+                 <li><a href="about.html" class="nav-link">About</a></li>
+                 <li><a href="events.html" class="nav-link">Events</a></li>
+                 <li><a href="donate.html" class="nav-link">Donate</a></li>
+                 <li><a href="games.html" class="nav-link">Educational Games</a></li>
+                 <li><a href="membership.html" class="nav-link active">Membership</a></li>
+            </ul>
+             <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="content-area">
+        <section class="page-title-section">
+            <h1>Become a Member</h1>
+            <p>Join our community and support our activities.</p>
+        </section>
+
+        <section id="membership-details">
+            <h2>How to Register/ Create a Membership ?</h2>
+            <p>1. Complete the School Registration Form
+
+o Access the form [here] (Insert hyperlink to online form if available)
+
+o Paper copies are available upon request via email or at our sessions.
+
+2. Submit Your Form
+
+o Online: Fill out and submit electronically.
+
+o In-person: Bring the completed form to your first session.
+
+o By email: Scan and send your completed form to [your email address].
+
+3. Receive Confirmation
+
+o We will confirm your place via email.
+
+o You will receive payment instructions and further details about your first session.
+
+What Information is Required?
+
+Student details (name, age, language background) Parent/guardian contact information Emergency contact details Medical or special educational needs (SEN) information Preferred session (AM or PM) Consent for photos, videos, and data handling</p>
+        </section>
+
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Charity Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Space for navigation bar -->
+    <div class="nav-space"></div>
+    
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <div class="logo-container">
+                    <div class="logo-circle"></div>
+                    <div class="logo-inner"></div>
+                </div>
+                <h1>Join Our Mission</h1>
+                <p>Register to make a difference today</p>
+            </div>
+            
+            <form id="registration-form">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullname" required>
+                        <label for="fullname">Full Name</label>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" required>
+                        <label for="phone">Phone Number</label>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                        <div class="line"></div>
+                        <div class="password-strength"></div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-heart"></i>
+                        <select id="interest" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="volunteer">Volunteer</option>
+                            <option value="donate">Donate</option>
+                            <option value="fundraise">Fundraise</option>
+                            <option value="partner">Partner</option>
+                        </select>
+                        <label for="interest" class="select-label">How would you like to help?</label>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" checked>
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Register</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>Already registered? <a href="#">Sign In</a></p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="decoration">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="hexagon"></div>
+            <div class="hexagon hexagon-2"></div>
+            <div class="hexagon hexagon-3"></div>
+            <div class="line-decoration line-1"></div>
+            <div class="line-decoration line-2"></div>
+            <div class="line-decoration line-3"></div>
+            <div class="particles"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Slovenské Vzdelávacie Centrum. All rights reserved.</p>
+        <p>Futuristic Charity Website Template</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
